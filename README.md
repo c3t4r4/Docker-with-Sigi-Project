@@ -34,7 +34,7 @@ To get started, make sure you have [Docker installed](https://docs.docker.com/) 
    && cp .env.example .env
    ```
 
-2. Set de Database Passwords and Copy to .env of Laravel into ./source folder
+2. Set de Database Passwords and Copy to .env of Laravel into ./app folder
 
 The configuration of the database **must be the same on both sides** .
 
@@ -50,7 +50,7 @@ DB_ROOT_PASSWORD=secret
 ```
 
 ```dotenv
-# source/.env
+# app/.env
 DB_CONNECTION=mysql
 DB_HOST=mysql
 DB_PORT=3306
@@ -59,10 +59,10 @@ DB_USERNAME=db_user
 DB_PASSWORD=db_password
 ```
 
-The only change is the `DB_HOST` in the `source/.env` where is called to the container of `mysql`:
+The only change is the `DB_HOST` in the `app/.env` where is called to the container of `mysql`:
 
 ```dotenv
-# source/.env
+# app/.env
 DB_HOST=mysql
 ```
 

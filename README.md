@@ -27,7 +27,11 @@ To get started, make sure you have [Docker installed](https://docs.docker.com/) 
 1. Clone this project:
 
    ```sh
-   git clone https://github.com/c3t4r4/Docker-with-Sigi-Project.git && cd Docker-with-Sigi-Project && cp .env.example .env && cd source && cp .env.example .env
+   git clone https://github.com/c3t4r4/Docker-with-Sigi-Project.git \ 
+   && cd Docker-with-Sigi-Project \ 
+   && cp .env.example .env \ 
+   && cd source \ 
+   && cp .env.example .env
    ```
 
 2. Set de Database Passwords and Copy to .env of Laravel into ./source folder

@@ -30,23 +30,7 @@ To get started, make sure you have [Docker installed](https://docs.docker.com/) 
    git clone https://github.com/c3t4r4/Docker-with-Sigi-Project.git && cd Docker-with-Sigi-Project && cp .env.example .env && cd source && cp .env.example .env
    ```
 
-2. Set de Database Passwords and Copy to .env of Laravel into ./source folder:
-
-   ```conf
-   cd source && cp .env.example .env
-   ```
-
-3. You need **Create** or **Put** your laravel project in the folder source; to create follow the next instructions [Here](source/README.md).
-
-4. Build the project whit the next commands:
-
-   ```sh
-   docker-compose up --build
-   ```
-
----
-
-## Remember
+2. Set de Database Passwords and Copy to .env of Laravel into ./source folder
 
 The configuration of the database **must be the same on both sides** .
 
@@ -77,6 +61,28 @@ The only change is the `DB_HOST` in the `source/.env` where is called to the con
 # source/.env
 DB_HOST=mysql
 ```
+
+3. Build the project whit the next commands:
+```sh
+docker-compose up -d
+```
+
+4. Install Dependency:
+```sh
+docker-compose run --rm composer install && docker-compose run --rm npm install && docker-compose run --rm npm run prod
+```
+
+5. Generate Key:
+```sh
+docker-compose run --rm artisan key:generate
+```
+
+6. Run Migrate and Seed:
+```sh
+docker-compose run --rm artisan migrate:fresh --seed
+```
+
+---
 
 ---
 

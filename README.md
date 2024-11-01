@@ -30,7 +30,7 @@ To get started, make sure you have [Docker installed](https://docs.docker.com/) 
    git clone https://github.com/c3t4r4/Docker-with-Sigi-Project.git \ 
    && cd Docker-with-Sigi-Project \ 
    && cp .env.example .env \ 
-   && cd source \ 
+   && cd app \ 
    && cp .env.example .env
    ```
 

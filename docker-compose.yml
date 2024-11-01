@@ -19,7 +19,7 @@ services:
       # Port for xdebug (ensure this matches the remote_port in the xdebug.ini)
       - "9001:9001"
     volumes:
-      - ./source:/var/www/html:delegated
+      - ./app:/var/www/html:delegated
     depends_on:
       - php
       - mysql
@@ -83,7 +83,7 @@ services:
       dockerfile: ./compose/php/Dockerfile
     container_name: php
     volumes:
-      - ./source:/var/www/html:delegated
+      - ./app:/var/www/html:delegated
       # Enable xdebug
       - ./compose/php/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
     ports:
@@ -97,7 +97,7 @@ services:
       dockerfile: ./compose/php/composer/Dockerfile
     container_name: composer
     volumes:
-      - ./source:/var/www/html
+      - ./app:/var/www/html
     working_dir: /var/www/html
     depends_on:
       - php
@@ -110,7 +110,7 @@ services:
     image: node:lts
     container_name: npm
     volumes:
-      - ./source:/var/www/html
+      - ./app:/var/www/html
     working_dir: /var/www/html
     entrypoint: ['npm']
 
@@ -120,7 +120,7 @@ services:
       dockerfile: ./compose/php/Dockerfile
     container_name: artisan
     volumes:
-      - ./source:/var/www/html:delegated
+      - ./app:/var/www/html:delegated
     depends_on:
       - mysql
     working_dir: /var/www/html

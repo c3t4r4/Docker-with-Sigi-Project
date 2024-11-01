@@ -1,9 +1,11 @@
+
+
 ### dotenv ###
 .env
 
 ### Laravel ###
-source/node_modules
-source/.env
-source/vendor
-source/npm-debug.log
-source/yarn-error.log
+app/node_modules
+app/.env
+app/vendor
+app/npm-debug.log
+app/yarn-error.log

@@ -27,11 +27,7 @@ To get started, make sure you have [Docker installed](https://docs.docker.com/) 
 1. Clone this project:
 
    ```sh
-   git clone https://github.com/c3t4r4/Docker-with-Sigi-Project.git \ 
-   && cd Docker-with-Sigi-Project \ 
-   && cp .env.example .env \ 
-   && cd app \ 
-   && cp .env.example .env
+   git clone https://github.com/c3t4r4/Docker-with-Sigi-Project.git && cd Docker-with-Sigi-Project && cp .env.example .env && cd app && cp .env.example .env
    ```
 
 2. Set de Database Passwords and Copy to .env of Laravel into ./app folder
@@ -73,15 +69,12 @@ docker-compose up -d
 
 4. Install Dependency:
 ```sh
-docker-compose run --rm composer install \ 
-&& docker-compose run --rm npm install \ 
-&& docker-compose run --rm npm run prod
+docker-compose run --rm composer install && docker-compose run --rm npm install && docker-compose run --rm npm run prod
 ```
 
 5. Generate Key:
 ```sh
-docker-compose run --rm artisan key:generate \
-&& docker-compose run --rm artisan optimize
+docker-compose run --rm artisan key:generate && docker-compose run --rm artisan optimize
 ```
 
 6. Run Migrate and Seed:

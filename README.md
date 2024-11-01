@@ -84,8 +84,27 @@ docker-compose run --rm artisan key:generate \
 ```sh
 docker-compose run --rm artisan migrate:fresh --seed
 ```
-
 ---
+
+## Users Default (to Change in app/database/seeds/UsersTableSeeder.php)
+```txt
+Name: Sys Admin
+Email: admin@email.com
+Password: senha123
+
+Name: Administrador
+Email: user1@email.com
+Password: senha123
+
+Name: Tesoureiro
+Email: user2@email.com
+Password: senha123
+
+Name: Secretário
+Email: user3@email.com
+Password: senha123
+```
+
 
 ---
 

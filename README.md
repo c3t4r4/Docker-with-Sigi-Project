@@ -76,7 +76,8 @@ docker-compose run --rm composer install \
 
 5. Generate Key:
 ```sh
-docker-compose run --rm artisan key:generate
+docker-compose run --rm artisan key:generate \
+&& docker-compose run --rm artisan optimize
 ```
 
 6. Run Migrate and Seed:

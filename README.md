@@ -69,7 +69,9 @@ docker-compose up -d
 
 4. Install Dependency:
 ```sh
-docker-compose run --rm composer install && docker-compose run --rm npm install && docker-compose run --rm npm run prod
+docker-compose run --rm composer install \ 
+&& docker-compose run --rm npm install \ 
+&& docker-compose run --rm npm run prod
 ```
 
 5. Generate Key:
